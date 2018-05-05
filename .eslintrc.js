@@ -4,12 +4,13 @@ module.exports = {
         "ecmaVersion": 6
     },
     "env": {
-        // browser グローバル変数を使用する
+        // グローバル変数を使用する 参考https://eslint.org/docs/user-guide/configuring.html#specifying-environments
         "browser": true,
+        "node": true,
+        "jest": true
     },
     "globals": {
-        "window": true,
-        "module": true
+        // "window": true,
     },
     "rules": {
         // インデントスタイルは3スペースに強制
