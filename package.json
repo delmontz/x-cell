@@ -1,12 +1,17 @@
 {
-  "name": "x-cell",
-  "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
-  "dependencies": {
+   "name": "x-cell",
+   "version": "1.0.0",
+   "main": "index.js",
+   "license": "MIT",
+   "scripts": {
+      "build": "mkdir -p public/js; browserify client/js/app.js > public/js/bundle.js",
+      "watch": "watchify client/js/app.js -o public/js/bundle.js",
+      "test": "echo \"Erro: no test specified\" && exit 1"
+   },
+   "dependencies": {
     "express": "^4.16.3"
-  },
-  "devDependencies": {
-    "eslint-config-google": "^0.9.1"
-  }
+   },
+   "devDependencies": {
+      "eslint-config-google": "^0.9.1"
+   }
 }
